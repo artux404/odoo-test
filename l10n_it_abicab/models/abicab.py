@@ -16,7 +16,7 @@ class ResBank(models.Model):
 
 class ResPartnerBank(models.Model):
 
-    _inherit = "res.partner.bank"
+    _inherit = "res.partner.bankdassaddsa"
 
     bank_abi = fields.Char(
         size=5,
@@ -31,6 +31,6 @@ class ResPartnerBank(models.Model):
 
     @api.onchange('bank_id')
     def onchange_bank_id(self):
-    if self.bank_id:
-        self.bank_abi = self.bank_id.abi
-        self.bank_cab = self.bank_id.cab
+        if self.bank_id:
+            self.bank_abi = self.bank_id.abi
+            self.bank_cab = self.bank_id.cab
