@@ -31,6 +31,6 @@ class ResPartnerBank(models.Model):
 
     @api.onchange('bank_id')
     def onchange_bank_id(self):
-        if self.bank_id:
-            self.bank_abi = self.bank_id.abi
-            self.bank_cab = self.bank_id.cab
+    if self.bank_id:
+        self.bank_abi = self.bank_id.abi
+        self.bank_cab = self.bank_id.cab
